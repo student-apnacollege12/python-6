@@ -1,22 +1,12 @@
-print("pakistan")
-num1=5
-num2=5
-sum=num1+num2
-print(sum) 
-num1=5
-num2=10
-diff=num2-num1
-print(diff)
-num1=10
-num2=5
-product=num1*num2
-print(product)
-num1=10
-num2=5
-division=num1// num2
-print(division)
-age=20
-print("This is my age", 20)
-print("My name is Muhammad Awais s/o Saeed Iqbal")
-print("I belong to Chichawatni,District Sahiwal")
-print("My education second year(IcS)")
+current_year=2024
+birth_year=2004
+age = current_year - birth_year
+print("This is my age",20)
+length = 10
+width = 5
+print("the area of the rectangle is:", length * width)
+print(3.14 * 7 ** 2)
+print((98 - 32) * 5 / 9)
+print((37 * 9 / 5) + 32)
+print(divmod(125, 60))
+print((400 / 500) * 100)
