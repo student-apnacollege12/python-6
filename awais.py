@@ -29,9 +29,9 @@
 # Even or Odd
 number = int(input("Enter a number"))
 if number % 2 == 0:
-    print("this is an even number ")
+    print("This is an Even number")
 else:
-    print("this is an odd number")    
+    print("This is an Odd number")    
 
 
 # Positive,Negtive,Zero
