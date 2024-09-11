@@ -1,98 +1,133 @@
 #import math
+#radius = float(input("Enter a radius of the circle"))
+#area = math.pi * radius * radius
 
-#def calcul_BMI():
-   # height = float(input("enter height meters : "))
-   # weight = float(input("Enter weight kg: "))
-    #BMI Calculation
-
-   # BMI = weight / (height ** 2)
-    #print(BMI)
-#calcul_BMI()
-
-
-
-#def calcul_Volume():
-   # radius = float(input("Enter radius cylinder: "))
-   # height = float(input("Enter height cylinder: "))
-
-    #volume calculation
-   # Volume = math.pi * (radius ** 2) * height
-   # return Volume
-     
-#output = calcul_Volume()   
-#print(output) 
+#print("the area of a circle", area)
 
 
 
 
-
-# Even or Odd
-number = int(input("Enter a number"))
-if number % 2 == 0:
-    print("This is an Even number")
-else:
-    print("This is an Odd number")    
+#count : int = 1
+#while count <=100:
+   # print("hello world",count)
+   # count = count + 10
 
 
-# Positive,Negtive,Zero
-    if number > 0:
-        print(f"number is positive.")
-    elif number < 0:
-        print(f"number is negtive.") 
-    else:
-        print(f"number is zero.") 
 
 
-#Divisibility by 2 and 3
-    if number % 2 == 0 and number % 3 == 0:
-        print(f"number is divisible by both 2 and 3.") 
-    elif number % 2 == 0:
-        print(f"number is divisible by 2.") 
-    elif number % 3 == 0:
-        print(f"number is divisible by 3.") 
-    else:
-        print(f"number is not divible by 2 or 3.") 
+#Function to insert a value at a specific indexin an array.
+def insert_value(arr, index, value):
+    arr.insert(index, value)
+    return arr
+my_array = [1,2,3,4]
+updated_array = insert_value(my_array, 2, 10)
+print(updated_array)
 
 
-#Voting Eligibility
-    age = int(input("Enter your age:"))   
-    if age >= 18:
-        nationality = input("Do you have Pakistani nationality? (yes/no):").lower() 
-        if nationality == "yes":
-            print("You are eligible to vote.")
+#Simple shopping cart program
+cart = []
+
+def add_item(item):
+    cart.append(item)
+    print(f"item '{item}' added to the cart.")
+
+    def remove_item(item):
+        if item in cart:
+            cart.remove(item)
+            print(f"item '{item}' removed from the cart.")
         else:
-            print("Please obtain a valid vote.")
+            print(f"item '{item}' not found in the cart.")
+
+    def updated_quantity(item, quantity):
+        if item in cart:
+            index = cart.index(item)
+            cart[index] = (item, quantity)
+            print(f"item '{item}' quantity updated to {quantity}.") 
+        else:
+            print(f"item '{item}' not found in the cart.")
+    def view_cart():
+        print("cart contents:")
+        for item in cart:
+            print(item)
+
+    add_item('apple') 
+    add_item('banana')
+    view_cart() 
+    updated_quantity('banan', 5) 
+    view_cart()
+    remove_item('apple')
+    view_cart()     
 
 
-# Age Category 
-    age = int(input("Enter your age: "))
-    if 0 <= age <= 12:
-        print("Your are a Child.")  
-    elif 13 <= age <= 19:
-        print("Your are a teenager.")  
-    elif 20 <= age <= 59:
-        print("Your are an Adult.")  
-    elif age >= 60:
-        print("YOur are a senior citizen.") 
-    else:
-        print("Ivalid age entered.")
+    #program to print the first 25 integers using a while loop.
+    i = 1
+    while i <= 25:
+        print(i)  
+        i += 1
 
 
-# Days in month
-    month = int(input("Enter the month(1-12):")) 
-    if month in[1,3,5,7,8,10,12]:
-        print("This month has 31 days.") 
-    elif month in [4,6,9,11]:
-        print("This month has 30 days.")
-    elif month == 2:
-        print("This month has 28 days.")  
-    else:
-        print("Invalid month entered.") 
+    #program to print the first 10 even numbers using a while loop.
+    i = 2
+    count = 0
+    while count < 10:
+        print(i) 
+        i += 2
+        count += 1
 
 
-# checking for leap year
-    year = int(input("Enter a year:"))
-    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
-        print(f"year is a leap year.") 
-    else:
-        print(f"year is  not a leap year.")                                                      
+    #function to calculate the factorial of a number using a while loop.
+    def factorial(n):
+        result = 1
+        while n > 0:
+            result *= n
+            n -= 1
+        return result
+    print(factorial(5))
+
+
+    #program to remove negative numbers from an array.
+    numbers = [1,-2,3,-4,5,-6] 
+    i = 0
+    while i < len(numbers):
+        if numbers[i] < 0:
+            numbers.pop(i)  
+        else:
+            i += 1
+    print(numbers)  
+
+
+    #function to calculate the sum of numbers in an aray using a while loop.
+    def sum_of_array(arr):
+        total = 0
+        i = 0
+        while i < len(arr):
+            total += arr[i] 
+            i += 1
+        return total
+    print(sum_of_array([1,2,3,4,5])) 
+
+
+    #programto convert celsius temperatures to fahrenheit
+    def celsius_to_fahrenheit(temperatures):
+        fahrenheit = []
+        i = 0
+        while i < len(temperatures):
+            f = (temperatures[i] *9/5 + 32)
+            fahrenheit.append(f)
+            i += 1
+        return fahrenheit
+
+    celsius_temperatures = [0,20,37,100]  
+    converted_temps = celsius_to_fahrenheit(celsius_temperatures)
+    print(converted_temps)
+
+
+    #program to remove all odd numbers from an array.
+    numbers = [1,2,3,4,5,6,7,8,9]
+    i = 0
+    while i < len(numbers):
+        if numbers[i] % 2 != 0:
+            numbers.pop(i)
+        else:
+            i += 1
+    print(numbers)        
